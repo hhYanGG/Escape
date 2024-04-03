@@ -15,7 +15,9 @@ AEscapeCharacter::AEscapeCharacter()
 void AEscapeCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	FString ObjectName = this->GetName();
+	FString ObjectPosition = GetActorLocation().ToString();
+	UE_LOG(LogTemp,Warning,TEXT("AEscapeCharacter::Beginplay %s is at %s"), *ObjectName ,*ObjectPosition);
 }
 
 // Called every frame
